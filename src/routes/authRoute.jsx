@@ -22,5 +22,6 @@ const authRoute = [
     ),
   },
 ];
+// top-level routes don't need a / at the start — React Router will automatically treat them as root-level paths.
 
 export default authRoute;

@@ -17,14 +17,14 @@ const useLogin = () => {
   const [userCookie, setUserCookie] = useCookie("user");
 
   const handleLogin = async (data) => {
-    const res = await login(data);
+    const res = await login(data);//returns a JSON response
 
     const json = await res.json();
 
     if (res.status === 200) {
       toast.success("Login Successfully");
-      setToken(json.token);
-      setUserCookie(JSON.stringify(json.user));
+      setToken(json.token);//the app knows the user is logged in
+      setUserCookie(JSON.stringify(json.user));//Cookies and localStorage only support strings
       navigate("/dashboard");
     } else {
       toast.error(json.message);

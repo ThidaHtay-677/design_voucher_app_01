@@ -13,11 +13,11 @@ const useRegister = () => {
   } = useForm();
 
   const handleRegister = async (data) => {
-    console.log(data);
+    //console.log(data);
 
-    const res = await accountRegister(data);
+    const res = await accountRegister(data);//register name equal to register in useForm
 
-    const json = await res.json();
+    const json = await res.json();//for error message 
 
     if (res.status === 200) {
       toast.success("Register Successfully");

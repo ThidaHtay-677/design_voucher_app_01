@@ -12,7 +12,7 @@ const Header = () => {
         <div className=" flex justify-between items-center">
           <div className="">
             <h1 className="text-3xl font-bold">Voucher App</h1>
-            <p className=" text-stone-500">MMS Software</p>
+            <p className=" text-stone-500">HEKO</p>
           </div>
           <div className=" flex gap-3 items-center">
             <img

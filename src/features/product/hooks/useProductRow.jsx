@@ -16,9 +16,7 @@ import { destroyProduct } from "../../../services/product";
 
 bouncy.register();
 
-const useProductRow = ({
-  product: { id, product_name, price, created_at, updated_at },
-}) => {
+const useProductRow = (id) => {
   const { mutate } = useSWRConfig();
   const [isDeleting, setIsDeleting] = useState(false);
 

@@ -29,6 +29,7 @@ const Sortable = ({ children, handleSort, sort_by, align }) => {
         </button>
       </span>
       <span>{children}</span>
+      {/* {children} = Text or content of the column */}
     </div>
   );
 };

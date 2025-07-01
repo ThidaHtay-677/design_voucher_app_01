@@ -44,11 +44,13 @@ const useProduct = () => {
   const updateFetchUrl = (url) => {
     setFetchUrl(url);
     setParams(urlToParamObject(url));
+    //urlToParamObject => api/products?page=2&sort=name => { page: "2", sort: "name" }
+  // Extract query parameters and save them in state
   };
 
   const handleSort = (sortData) => {
     const sortParams = new URLSearchParams(sortData).toString();
-    setParams(sortData);
+    setParams(sortData);//params => not string , only object
     setFetchUrl(`${import.meta.env.VITE_API_URL}/products?${sortParams}`);
   };
 
@@ -65,3 +67,18 @@ const useProduct = () => {
 };
 
 export default useProduct;
+
+//const sortParams = new URLSearchParams(sortData).toString();
+// sortData=>
+// {
+//   sort_by: "name",
+//   sort_direction: "asc"
+// }
+
+// new URLSearchParams({
+//   sort_by: "name",
+//   sort_direction: "asc"
+// }).toString();
+
+// "sort_by=name&sort_direction=asc"
+

@@ -7,13 +7,13 @@ import Header from "./Header";
 import PageLoading from "../../../components/PageLoading";
 
 const DashboardLayout = () => {
-  const [token] = useCookie("my_token");
+  const [token] = useCookie("my_token");//To check if the user is logged in
   const [userCookie] = useCookie("user");
   const { user, setUser } = useUserStore();
 
   useEffect(() => {
     setUser(JSON.parse(userCookie));
-  }, []);
+  }, []);//to show the user profile
 
   if (!token) {
     return <Navigate to="/" />;
@@ -24,6 +24,7 @@ const DashboardLayout = () => {
       <Header />
       <Suspense fallback={<PageLoading />}>
         <Outlet />
+        {/* dashboard/products */}
       </Suspense>
       <Toaster position="top-right" />
     </main>

@@ -6,7 +6,7 @@ import { tailspin } from "ldrs";
 import toast from "react-hot-toast";
 import useSWR, { useSWRConfig } from "swr";
 import { fetchProducts, updateProduct } from "../../../services/product";
-import ButtonSpinner from "../../../components/ButtonSpinner";
+
 
 tailspin.register();
 

@@ -43,7 +43,8 @@ const ProductCreateForm = () => {
                 ? "Product name is required"
                 : errors.product_name.type === "minLength"
                 ? "Product name must be greater than 3 characters"
-                : "Product name must be less than 30 characters"}
+                : "Product name must be less than 30 characters"
+                }
             </p>
           )}
         </div>

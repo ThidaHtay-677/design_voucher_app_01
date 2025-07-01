@@ -21,7 +21,7 @@ const Pagination = ({
     per_page: 0,
     current_page: 0,//to know the current page besc we do not used 1 , 2, 3 pagination style
     last_page: 0,
-    links: [],
+    links: [],//For Numbered Pagination Buttons (1, 2, 3, ...)
     path: "",
   },
   updateFetchUrl,
@@ -46,7 +46,7 @@ const Pagination = ({
       <div className=" flex gap-3 items-center">
         <div className=" flex items-center gap-2">
           <label
-            htmlFor="countries"
+            htmlFor=""
             className="block text-gray-700 text-sm text-nowrap dark:text-white"
           >
             Rows per page

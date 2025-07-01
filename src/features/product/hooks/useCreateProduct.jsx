@@ -21,7 +21,7 @@ export const useCreateProduct = () => {
       if (res.status !== 201) {
         toast.error(json.message);
         return;
-      }//create =201 
+      } //create status-code=201
 
       toast.success("Product created successfully");
       reset();

@@ -12,18 +12,20 @@ const useProductSelect = () => {
 
   const { register, handleSubmit, reset } = useForm();
 
+
   const { addRecord, changeQuantity, records } = useSaleProductStore();
 
   const onSubmit = (data) => {
     const currentProduct = JSON.parse(data.product);
-    const currentProductId = currentProduct.id;
 
+    const currentProductId = currentProduct.id;//id from form
     const isExited = records.find(
       ({ product: { id } }) => currentProductId === id
     );
 
     if (isExited) {
       changeQuantity(isExited.product_id, data.quantity);
+      // data.quantity => come from form submit
     } else {
       addRecord({
         product: currentProduct,
@@ -40,6 +42,8 @@ const useProductSelect = () => {
   if (isLoading) return <ButtonSpinner />;
 
   return {
+    onSubmit,
+    data,
     isLoading,
     handleSubmit,
     register,

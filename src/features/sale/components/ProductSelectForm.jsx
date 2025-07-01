@@ -7,7 +7,7 @@ import useProductSelect from "../hooks/useProductSelect";
 
 const ProductSelectForm = () => {
 
-  const {isLoading,handleSubmit,register,}=useProductSelect();
+  const {isLoading,handleSubmit,register,data,onSubmit}=useProductSelect();
 
 
   if (isLoading) return <ButtonSpinner />;

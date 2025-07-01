@@ -27,3 +27,12 @@ const useSaleProductStore = create((set) => ({
 }));
 
 export default useSaleProductStore;
+
+
+      // addRecord({
+      //   product: currentProduct,
+      //   product_id: currentProduct.id,
+      //   quantity: data.quantity,
+      //   cost: currentProduct.price * data.quantity,
+      //   created_at: new Date().toISOString(),
+      // });
